@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-module.exports = mongoose.connect('mongodb://localhost/db_finance')
+module.exports = mongoose.connect('mongodb://localhost/grm-express')
 
 var db = mongoose.connection;  
 db.on('error', function(err){  
