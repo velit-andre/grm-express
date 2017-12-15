@@ -32,4 +32,8 @@ exemploCrud.find({_id: '5a31b041b388420abcf9f048'})
 
 }
 
+
+
+
+
 module.exports = { resumo, teste }

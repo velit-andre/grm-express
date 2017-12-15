@@ -1,6 +1,7 @@
 const _ = require('lodash')
-const utils = require('./grm.utils')
-const services = require('../api/grm.api');
+const cron = require('node-cron')
+const task = require('./grm.scheduler')
+const services = require('../api/grm.api-service');
 
 
 // atribui aos serviços restfull os schemas listados no arquivo 'grm.api'
@@ -53,5 +54,9 @@ module.exports = (router) => {
             const concatPathRoute = `${nameRoute}/${myFunction.name}`
             router.route( concatPathRoute ).get( myFunction )
         })
+
     })
 }
+
+
+

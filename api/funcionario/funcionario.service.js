@@ -5,5 +5,6 @@ module.exports = {
   schema: Schema,
   methods: ['get', 'post', 'put', 'delete'],
   extends: [ teste.filhos, teste.netos ],
-  erros: []
+  erros: [],
+  tasks: []
 }
