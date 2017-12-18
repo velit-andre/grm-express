@@ -7,7 +7,7 @@ module.exports = function (server) {
       server.use('/api', router)
 
       // rotas da API
-      require('../grm-classes/grm.restful')(router)
+      require('../grm-class/grm.restful')(router)
       //   const exemploResumo = require('../api/exemplo/resumo.service')
       //   router.route('/exemplo/resumo').get(exemploResumo.getResumo)
 }

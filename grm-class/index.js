@@ -29,10 +29,7 @@ schudeler.forEach( (item) => {
 data.forEach( (arr) => {
     const nameCollection = arr.splice(0,1)
     const Model = new GrmCrud(nameCollection)
-    console.info(nameCollection, arr)
     arr.forEach( (item) => {
-        console.log(item)
-        // console.log(Model)
         Model.isEmptyThenCreate(item).catch((err)=> console.error)
     })
 })

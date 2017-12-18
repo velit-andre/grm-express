@@ -25,13 +25,9 @@ class Crud {
             }
             if (result) {                
                 if (result.length) {
-                    console.info('ACHOU')
                     return;
                 } else {
-                    // const doc = createCollectionGrm_user()
                     this.save(filtro)
-                    console.info('NÃO ECONTROOU')
-                
                 }               
             }
         })
@@ -47,13 +43,9 @@ class Crud {
             if (result) {          
                 // console.info(result)      
                 if (result.length) {
-                    console.info('ACHOU')
                     return;
                 } else {
-                    
                     this.save(filtro)
-                    console.info('NÃO ECONTROOU')
-                
                 }               
             }
         })

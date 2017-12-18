@@ -1,7 +1,7 @@
 
 function testeAgenda() {
     let data = new Date().toString()
-    console.log(`${data.substring(4,24)} Agendamento de Tarerfa "escola" está funcionando!`);
+    console.log(`${data.substring(4,24)} Agendamento de Tarefa "escola" está funcionando!`);
 }
 
 

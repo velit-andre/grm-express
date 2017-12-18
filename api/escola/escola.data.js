@@ -20,4 +20,4 @@ let data = {
     ]
 }
 
-module.exports = ['exemplo', data ]
+module.exports = ['escola', data ]
