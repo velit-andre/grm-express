@@ -1,7 +1,6 @@
-// exporte neste arquivo os agendamentos de tarefa.
 
-const exemploSchenduler = require('./exemplo/exemplo.scheduler')
+// exporte neste arquivo os agendamentos de tarefa. ¹
 
 module.exports = [
-    exemploSchenduler
+    
 ]

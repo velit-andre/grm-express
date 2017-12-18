@@ -16,6 +16,48 @@ class Crud {
             }
         })
     }
+
+    async findOrCreate(filtro = {}, attrs = {}) {
+        return await  this.Model.find(filtro, attrs, (err, result)=> {
+            if (err) {
+                console.log('ERRO: ', err);
+                return err
+            }
+            if (result) {                
+                if (result.length) {
+                    console.info('ACHOU')
+                    return;
+                } else {
+                    // const doc = createCollectionGrm_user()
+                    this.save(filtro)
+                    console.info('NÃO ECONTROOU')
+                
+                }               
+            }
+        })
+    }    
+    
+
+    async isEmptyThenCreate(filtro = {}, attrs = {}) {
+        return await  this.Model.find({}, (err, result)=> {
+            if (err) {
+                console.log('ERRO: ', err);
+                return err
+            }
+            if (result) {          
+                // console.info(result)      
+                if (result.length) {
+                    console.info('ACHOU')
+                    return;
+                } else {
+                    
+                    this.save(filtro)
+                    console.info('NÃO ECONTROOU')
+                
+                }               
+            }
+        })
+    }    
     
     async findOne(filtro = {}, attrs = {}) {
         return await  this.Model.findOne(filtro, attrs, (err, result)=> {

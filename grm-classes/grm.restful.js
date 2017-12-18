@@ -1,14 +1,15 @@
 const _ = require('lodash')
 const cron = require('node-cron')
 const task = require('./grm.scheduler')
-const services = require('../api/grm.api-service');
+const apiServices = require('../api/grm.api-service')
+const apiGrmDefaultServices = require('../api/grm-smartadmin/grm.api-service')
 
+const services = apiServices.concat(apiGrmDefaultServices)
 
 // atribui aos serviços restfull os schemas listados no arquivo 'grm.api'
 module.exports = (router) => {
     
     services.forEach((service) => {
-
         const nameAPI = service.schema.modelName.toLowerCase()
         const nameRoute = service.route || '/'.concat(nameAPI)
         const Model = service.schema
@@ -50,6 +51,7 @@ module.exports = (router) => {
 
         // atribui uma rota na qual será retonado o resultado da função
         // passada via parametro
+        service.extends = service.extends || []
         service.extends.forEach( (myFunction) => {
             const concatPathRoute = `${nameRoute}/${myFunction.name}`
             router.route( concatPathRoute ).get( myFunction )

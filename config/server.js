@@ -12,6 +12,8 @@ server.use(bodyParser.json())
 server.use(allowCors)
 server.use(queryParser())
 
+server.use( express.static('assets') )
+
 server.listen(port, function() {
   console.log(`BACKEND is running on port ${port}.`)
 })
