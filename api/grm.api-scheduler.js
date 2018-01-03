@@ -1,9 +1,8 @@
 
 // exporte neste arquivo os agendamentos de tarefa. ¹
-
-const escolaScheduler = require('./escola/escola.scheduler')
-
+const caixaScheduler = require('./caixa/caixa.scheduler')
 
 module.exports = [
-    escolaScheduler,
+  caixaScheduler,
+
 ]

@@ -1,9 +1,8 @@
 
 // exporte neste arquivo as APIs que deseja rodar na aplicação. ¹
-
-const escolaData = require('./escola/escola.data')
-
+const caixaData = require('./caixa/caixa.data')
 
 module.exports = [
-    escolaData, 
+  caixaData,
+
 ]

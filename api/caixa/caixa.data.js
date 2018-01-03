@@ -1,4 +1,4 @@
-let data = {
+const data = {
     "name": "dezembro",
     "month": 11,
     "year": 2018,
@@ -20,4 +20,4 @@ let data = {
     ]
 }
 
-module.exports = ['escola', data ]
+module.exports = ['caixa', data ]

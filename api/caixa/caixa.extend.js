@@ -1,12 +1,12 @@
 const _ = require('lodash')
-const escolaSchema = require('./escola.schema')
+const caixa = require('./caixa.schema')
 const Crud = require('../../grm-class/grm.crud')
 const grmScheduler = require('../../grm-class/grm.scheduler')
 
 
 // Mais uma função middleware
 function resumo(req, res) {
-  escola.aggregate({
+  caixa.aggregate({
     $project: {credito: {$sum: "$credito.value"}, debito: {$sum: "$debito.value"}}
   }, {
     $group: {_id: null, credito: {$sum: "$credito"}, debito: {$sum: "$debito"}}
@@ -22,8 +22,8 @@ function resumo(req, res) {
 }
 
 function teste(req, res) {
-    const escolaCrud = new Crud('escola')
-    escolaCrud.find({_id: '5a31b041b388420abcf9f048'})
+    const caixaCrud = new Crud('caixa')
+    caixaCrud.find({_id: '5a31b041b388420abcf9f048'})
         .catch(console.log)
         .then(result => result[0].name)
         .then(result => result.toUpperCase())
@@ -33,11 +33,6 @@ function teste(req, res) {
 function stopAgenda(req, res) {
   res.send('stop agenda!')
   grmScheduler.pauseTask('testeAgenda')
-}
-
-function playpAgenda(req, res) {
-  res.send('stop agenda!')
-  grmScheduler.playTask('testeAgenda')
 }
 
 
