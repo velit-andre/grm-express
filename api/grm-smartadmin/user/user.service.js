@@ -8,5 +8,6 @@ module.exports = {
     methods: ['get', 'post', 'put', 'delete'],
     extends: [],
     erros: [],
+    methodsAuth: ['get'],
     route: '/user/login-info'
 }

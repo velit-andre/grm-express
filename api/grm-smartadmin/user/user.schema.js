@@ -3,7 +3,9 @@ const mongoose = restful.mongoose
 
 
 const schema = new mongoose.Schema({
-  username: { type: String },
+  username: { type: String, required: true },
+  user: { type: String, required: true  },
+  pass: { type: String, required: true  },
   picture: { type: String },
   activity: { type: Number }
 })

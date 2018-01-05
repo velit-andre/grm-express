@@ -11,7 +11,7 @@ const grmSchedule = require('./grm.scheduler')
 const GrmCrud = require('./grm.crud')
 
 const schudeler = grmApiSchudeler.concat(grmApiDefaultSchudeler)
-const data = grmApiData
+const data = grmApiData.concat(grmApiDefaultData)
 
 // Agendador de Tarefas
 schudeler.forEach( (item) => {

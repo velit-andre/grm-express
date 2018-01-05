@@ -13,6 +13,7 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-query-int": "^1.0.1",
+    "express-session": "^1.15.6",
     "lodash": "^4.17.2",
     "mongoose": "^4.7.0",
     "mongoose-paginate": "^5.0.3",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "console-info": "0.0.5",
     "console-warn": "0.0.4",
+    "grm-cli": "^1.0.0",
     "nodemon": "^1.13.3"
   }
 }

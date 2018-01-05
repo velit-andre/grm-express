@@ -49,7 +49,7 @@ module.exports = (router) => {
         // atribui rotas para o serviço restful
         Model.register(router, nameRoute)
 
-        // atribui uma rota na qual será retonado o resultado da função
+        // atribui uma rota na qual será retornado o resultado da função
         // passada via parametro
         service.extends = service.extends || []
         service.extends.forEach( (myFunction) => {
