@@ -9,7 +9,5 @@ module.exports = function (server) {
 
       // rotas da API
       require('../grm-class/grm.restful')(router)
-      //   const exemploResumo = require('../api/exemplo/resumo.service')
-      //   router.route('/exemplo/resumo').get(exemploResumo.getResumo)
 }
 
