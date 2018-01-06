@@ -4,11 +4,11 @@ GRM Express é um projeto Node.js que visa facilitar e automatizar o desenvolvim
 
 # Sumary
 
-- [Features](#fetures)
+- [Features](#features)
+- [Instalação](#instalação)
 - [O projeto](#o-projeto)
 - [Ambiente](#ambiente)
 - [Recomendações](#recomendações)
-- [Instalação](#instalação)
 - [Contato](#contato)
 - [Licence](#licence)
 
@@ -24,6 +24,19 @@ GRM Express é um projeto Node.js que visa facilitar e automatizar o desenvolvim
 - Controle de sessão
 - Controle de usuários
 - Interface de Linha de Comandos (CLI)
+
+# Instalação
+ 
+ Baixe o projeto:
+ 
+```sh
+$ git clone https://github.com/geilsonrm/grm-express nomeDoProjeto
+```
+
+Acesse o projeto e instale as dependências:
+```sh
+$ npm install
+```
 
 # O projeto
 
@@ -45,18 +58,19 @@ Ao executar o comando para criação de nova API, irá ocorrer automaticamente:
 - Criação de nova API organizada e estruturada por módulos
 - Criação de rotas para a API (GET, POST, PUT, DELETE...)
 - Criação de modelo de schema para o banco
-- Criação de collection no banco
+- Criação da collection no banco
 - Inserção de dados pré-definidos na collection
 - Criação de modelo de agendamento de tarefas
 
-(Todas ações acima poderão ser facilmente editas e customizadas)
+(Todas ações acima poderão ser facilmente editadas e customizadas)
 
 Quando uma nova API é criada, imediatamente estará pronta para testes.
+
 A rota será o nome da API criada, mas poderá ser facilmente alterada, para acessar basta inserir a url no navegador:
 
-*localhost:3000/api/financeiro*
+localhost:3000/api/financeiro
 
-Saiba mais sobre o projeto [**aqui**](doc/projeto.md).
+[**saiba mais**](doc/projeto.md).
 
 # Ambiente!
 
@@ -64,20 +78,7 @@ Para rodar o projeto certifique-se de ter o ambiente preparado [[**detalhes**](d
 
 # Recomendações
 
-Alguns aplicativos e plugins que estou utilizando [[**detalhes**](doc/recomendacao.md)].
-
-# Instalação
-
-Agora com o nosso ambiente pronto, escolha um local e vamos instalar o projeto.
-
-```sh
-$ git clone https://github.com/geilsonrm/grm-express nomeDoProjeto
-```
-
-Instale as dependências:
-```sh
-$ npm install
-```
+Recomendação de alguns aplicativos e plugins [[**detalhes**](doc/recomendacao.md)].
 
 # Implemente seu código
 
