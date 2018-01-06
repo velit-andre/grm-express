@@ -38,6 +38,16 @@ Acesse o projeto e instale as dependências:
 $ npm install
 ```
 
+Inicie o MongoDB:
+```sh
+$ mongod
+```
+
+Inicie o Projeto:
+```sh
+$ nodemon
+```
+
 # O projeto
 
 A utilização é muito simples, basta baixar e rodar, com isso você terá:
