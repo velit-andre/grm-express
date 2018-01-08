@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "production": "pm2 start index.js --name grm-express",
-    "postinstall": "node -e \"console.log('\\u001b[32mGostou desta ferramenta?\\nVocê pode ajudar a manter este projeto:\\u001b[22m\\u001b[39m\\n> \\u001b[96m\\u001b[1mhttps://grmsystem.com\\u001b[0m\\n')\""   
+    "postinstall": "node -e \"console.log('\\u001b[32mGostou desta ferramenta?\\nVocê pode ajudar a manter este projeto:\\u001b[22m\\u001b[39m\\n> \\u001b[96m\\u001b[1mhttps://grmsystem.com\\u001b[0m\\n')\""
   },
   "author": "Geilson Ribeiro Mirandola",
   "license": "ISC",
@@ -20,7 +20,8 @@
     "mongoose-paginate": "^5.0.3",
     "node-cron": "^1.2.1",
     "node-restful": "^0.2.5",
-    "pm2": "^2.1.5"
+    "pm2": "^2.1.5",
+    "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
     "console-info": "0.0.5",

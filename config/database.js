@@ -1,3 +1,5 @@
+
+const config = require('./config')
 const mongoose = require('mongoose')
 module.exports = mongoose.connect('mongodb://localhost/grm-express')
 
