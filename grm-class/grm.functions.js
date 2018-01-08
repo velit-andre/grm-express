@@ -20,6 +20,22 @@ String.prototype.capitalize = function () {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
 
+String.prototype.getIn = function (start, end) {
+    return this.substring(this.indexOf(start) + start.length, this.lastIndexOf(end))
+}
+
+String.prototype.getLine = function (line) {
+	return this.toString().split('\n')[line]
+}
+
+Function.prototype.getLine = function (line) {
+	return this.toString().split('\n')[line]
+}
+
+String.prototype.exist = function (value) {
+    return this.indexOf(value) >= 0
+}
+
 Array.prototype.exist = function (value) {
     return this.indexOf(value) >= 0
 }

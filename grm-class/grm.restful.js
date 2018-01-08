@@ -6,6 +6,8 @@ const apiGrmDefaultServices = require('../api/grm-smartadmin/grm.api-service')
 
 const services = apiServices.concat(apiGrmDefaultServices)
 
+
+
 // atribui aos serviços restfull os schemas listados no arquivo 'grm.api'
 module.exports = (router) => {
     
@@ -52,9 +54,10 @@ module.exports = (router) => {
         // atribui uma rota na qual será retornado o resultado da função
         // passada via parametro
         service.extends = service.extends || []
-        service.extends.forEach( (myFunction) => {
-            const concatPathRoute = `${nameRoute}/${myFunction.name}`
-            router.route( concatPathRoute ).get( myFunction )
+        service.extends.forEach( (fn) => {
+            let concatPathRoute = `${nameRoute}/${fn.name}`
+            concatPathRoute += fn.params ? fn.params : ""           
+            router.route( concatPathRoute ).get( fn )
         })
 
     })
