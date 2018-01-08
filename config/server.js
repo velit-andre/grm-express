@@ -33,7 +33,7 @@ server.listen(config.port, function () {
 })
 
 server.route('/').get((req, res, next) => {
-	if(config.pageRoot) {
+	if(config.showPageRoot) {
 		res.render('index', {config})
 	} else {
 		return next()		

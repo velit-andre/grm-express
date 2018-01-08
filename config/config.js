@@ -4,13 +4,18 @@ module.exports = {
     project: 'grm-express',
     database: 'grm',
     port: 3000,
-    pageRoot: true,
+    requireAuth: false,
+    showPageRoot: true,
     sessionSecret: 'minhaPalavraSecresta',
     originAccess: '*',
     developer: {
         name: 'Geilson Ribeiro',
         url: 'grmsystem.com',
         email: 'geilsonrm@hotmail.com'
+    },
+    user: {
+        user: 'master',
+        pass: 2
     },
     backup: {
         local: 'c:/backup',

@@ -1,11 +1,11 @@
 
-
+const config = require('../config/config')
 const apiGrmDefaultServices = require('../api/grm-smartadmin/grm.api-service')
 var grmApiService = require('../api/grm.api-service')
 
 grmApiService = grmApiService.concat(apiGrmDefaultServices)
 
-module.exports = function (server) {
+function auth(server) {
 
 	var services = []
 	var services2 = []
@@ -67,3 +67,10 @@ module.exports = function (server) {
 
 }
 
+function notAuth(server) { }
+
+if(config.requireAuth) {
+	module.exports = auth
+} else {
+	module.exports = notAuth
+}
