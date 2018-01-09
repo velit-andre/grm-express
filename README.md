@@ -1,6 +1,6 @@
 # GRM Express
 
-GRM Express é um projeto Node.js que visa facilitar e automatizar o desenvolvimento de APIs e aplicações back-end, acelerando o desenvolvimento, eliminando tarefas repetitivas e código complexo e extenso.
+GRM Express é um projeto Node.js que visa facilitar e automatizar o desenvolvimento de APIs e aplicações back-end, acelerando o desenvolvimento, eliminando tarefas repetitivas e códigos complexos e extensos.
 
 # Sumary
 
@@ -25,7 +25,7 @@ GRM Express é um projeto Node.js que visa facilitar e automatizar o desenvolvim
 - Controle de usuários
 - Interface de Linha de Comandos (CLI)
 
-# Instalação
+# Instalação e Uso
  
  Baixe o projeto:
  
@@ -42,12 +42,13 @@ Inicie o MongoDB:
 ```sh
 $ mongod
 ```
-
+Defina suas configurações em: /config/config.js
 Inicie o Projeto:
 ```sh
 $ nodemon
 ```
 
+Acesse o servidor para checar o funcionamento: http://localhost:3000
 # O projeto
 
 A utilização é muito simples, basta baixar e rodar, com isso você terá:
@@ -63,7 +64,7 @@ Novas APIs poderão ser facilmente adicionadas através de comandos:
 $ grm api financeiro
 ```
 
-Ao executar o comando para criação de nova API, irá ocorrer automaticamente:
+Ao executar o comando para criação de nova api, irá ocorrer automaticamente:
 
 - Criação de nova API organizada e estruturada por módulos
 - Criação de rotas para a API (GET, POST, PUT, DELETE...)
@@ -74,11 +75,11 @@ Ao executar o comando para criação de nova API, irá ocorrer automaticamente:
 
 (Todas ações acima poderão ser facilmente editadas e customizadas)
 
-Quando uma nova API é criada, imediatamente estará pronta para testes.
+Quando uma nova api é criada, imediatamente estará pronta para testes.
+Para visualizar a api criada acesse a pasta: /api/nomeDaApi.
+A rota será o nome da api criada, mas poderá ser facilmente alterada, para acessar basta inserir a url no navegador:
 
-A rota será o nome da API criada, mas poderá ser facilmente alterada, para acessar basta inserir a url no navegador:
-
-localhost:3000/api/financeiro
+http://localhost:3000/api/financeiro
 
 [**saiba mais**](doc/projeto.md).
 

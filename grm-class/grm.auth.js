@@ -66,10 +66,7 @@ function auth(server) {
 
 }
 
-function notAuth(server) { }
+// está função não faz nada, é utilizada para não exigir autenticação.
+function notAuth(server) {}
 
-if(config.requireAuth) {
-	module.exports = auth
-} else {
-	module.exports = notAuth
-}
+module.exports = config.requireAuth ? auth : notAuth
