@@ -1,9 +1,11 @@
 
-const server = require('./config/server')
 require('./config/database')
-require('./config/routes')(server)
-require('./grm-class')
-const Middleware = require('./grm-class/grm.login')
 
-// Middleware.routeRequireAuth(server)
-Middleware.controllerLogin(server)
+const {login} = require('./grm-class')
+const {routes, server} = require('./config')
+
+// chama array de rotas da aplicação e apis.
+routes(server)
+
+// classe responsável pelo controle de login e suas rotas.
+login.controller(server)

@@ -14,7 +14,7 @@ var Crud = require('./grm.crud')
 
 module.exports = class Middlware {
 
-    static controllerLogin(server) {
+    static controller(server) {
         
         server.route('/logout').get((req, res) => {
             req.session.destroy(err => res.send('Sessão encerrada!'))

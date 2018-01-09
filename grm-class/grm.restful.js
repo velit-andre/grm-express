@@ -7,7 +7,6 @@ const apiGrmDefaultServices = require('../api/grm-smartadmin/grm.api-service')
 const services = apiServices.concat(apiGrmDefaultServices)
 
 
-
 // atribui aos serviços restfull os schemas listados no arquivo 'grm.api'
 module.exports = (router) => {
     
@@ -15,17 +14,19 @@ module.exports = (router) => {
         const nameAPI = service.schema.modelName.toLowerCase()
         const nameRoute = service.route || '/'.concat(nameAPI)
         const Model = service.schema
-
+        
         Model.methods(service.methods)
+        
         Model.updateOptions({ new: true, runValidators: true })
-
+        
         Model.after('post', sendErrorsOrNext).after('put', sendErrorsOrNext)
-
+        
         function sendErrorsOrNext(req, res, next) {
             const bundle = res.locals.bundle
-
+            
             if (bundle.errors) {
                 var errors = parseErrors(bundle.errors)
+                
                 res.status(500).json({ errors })
             } else {
                 next()

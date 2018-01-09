@@ -9,7 +9,7 @@ const server = express()
 const allowCors = require('./cors')
 const queryParser = require('express-query-int')
 const expressSession = require('express-session')
-const grmAuth = require('../grm-class/grm.auth')
+const {auth} = require('../grm-class')
 
 server.use(expressSession({
 	secret: config.sessionSecret,
@@ -17,7 +17,8 @@ server.use(expressSession({
 	saveUninitialized: false
 }))
 
-grmAuth(server)
+// controle de sessão e autenticação de usuário.
+auth(server)
 
 server.set('view engine', 'pug');
 

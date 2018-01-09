@@ -2,7 +2,7 @@
 module.exports = {
 
     project: 'grm-express',
-    database: 'grm',
+    database: 'grm-express',
     port: 3000,
     requireAuth: false,
     showPageRoot: true,
@@ -16,10 +16,6 @@ module.exports = {
     admin: {
         user: 'master',
         pass: 2
-    },
-    backup: {
-        local: 'c:/backup',
-        schedule: 's m h D M DS', 
     }
 
 }

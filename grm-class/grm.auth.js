@@ -39,7 +39,6 @@ function auth(server) {
 		// a regra só deve ser aplicada a rotas tratadas acima.
 		// rotas não previstas serão tratas pela middleware de error.
 		if (existUrl(url)) {
-			console.log('EXISTE ESCOLA')
 			if (req.session.auth) {
 				return next();
 			} else {
