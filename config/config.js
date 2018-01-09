@@ -13,7 +13,7 @@ module.exports = {
         url: 'grmsystem.com',
         email: 'geilsonrm@hotmail.com'
     },
-    user: {
+    admin: {
         user: 'master',
         pass: 2
     },

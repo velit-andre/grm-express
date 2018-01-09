@@ -4,8 +4,8 @@ const config = require('../../../config/config')
 let data = {
   "username": "John Doe Master",
   "picture": "assets/img/avatars/sunny.png",
-  "user": config.user,
-  "pass": config.pass,
+  "user": config.admin.user,
+  "pass": config.admin.pass,
   "activity": 12
 }
 
