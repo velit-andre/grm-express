@@ -5,6 +5,7 @@ require('../grm-class/grm.functions')
 const config = require('./config')
 const bodyParser = require('body-parser')
 const express = require('express')
+const compression = require('compression');
 const server = express()
 const allowCors = require('./cors')
 const queryParser = require('express-query-int')
@@ -16,6 +17,8 @@ server.use(expressSession({
 	resave: false,
 	saveUninitialized: false
 }))
+
+server.use(compression({filter: (req, res) => req.headers['x-no-compression'] ? false : compression.filter(req, res)}));
 
 // controle de sessão e autenticação de usuário.
 auth(server)
